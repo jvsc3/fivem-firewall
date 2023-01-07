@@ -69,7 +69,7 @@ fn main() {
         future::ok(fw())
     });
 
-    let addr = SocketAddr::new(Ipv4Addr::new(127, 0, 0, 1).into(), 8080);
+    let addr = SocketAddr::new(Ipv4Addr::new(127, 0, 0, 1).into(), 25565);
     let server = Server::bind(&addr).serve(make_service);
 
     println!("Listening on http://{}", addr);
